@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "nail-app-client"
+version = "0.1.0"
+description = "Public Telegram client bot for nail-app."
+authors = ["emris-git <opensource@example.com>"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.13.0"
+httpx = "^0.28.1"
+pydantic = "^2.9.0"
+pydantic-settings = "^2.6.0"
+python-dotenv = "^1.0.1"
+redis = "^5.0.8"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.0"
+mypy = "^1.11.0"
+pytest = "^8.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
